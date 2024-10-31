@@ -16,10 +16,10 @@
 <body class="font-poppins">
 
     <!-- Header section start -->
-    <header>
-        <!-- Navbar start -->
-        <nav class="bg-green-6 border-b border-green-4">
-            <section class="w-11/12 sm:w-10/12 mx-auto py-4 flex items-center justify-between gap-2 sm:gap-5 text-green-1">
+    <header class="relative">
+        <!-- Nav section start -->
+        <section class="bg-green-6 border-b border-green-4">
+            <nav class="w-11/12 sm:w-10/12 mx-auto py-4 flex items-center justify-between gap-2 sm:gap-5 text-green-1">
                 <!-- Left content -->
                 <div class="flex items-center gap-3 lg:gap-0">
 
@@ -28,7 +28,7 @@
                             <i class="fa-solid fa-bars text-2xl"></i>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm bg-green-4 dropdown-content rounded-lg z-[1] mt-5 w-52 p-2 shadow">
+                            class="menu menu-sm bg-green-4 dropdown-content rounded-lg z-50 mt-5 w-52 p-2 shadow">
                             <li><a href="#">হোম</a></li>
                             <li><a href="#">ফিচার</a></li>
                             <li><a href="#">প্যাকেজ এবং প্রাইস</a></li>
@@ -54,14 +54,33 @@
                 </ul>
 
                 <!-- Right content -->
-                <div>
-                    <a href="#" class="inline-block border border-green-3 px-4 sm:px-6 text-center py-1 sm:py-2 rounded-full text-green-2 font-bold text-sm sm:text-base">ডেমো অনুরোধ</a>
-                </div>
-            </section>
-        </nav>
-        <!-- Navbar end -->
+                <button class="hover:bg-green-3 duration-150 active:scale-95 inline-block cursor-pointer border border-green-3 px-4 sm:px-6 text-center py-2 rounded-full text-green-2 font-bold text-sm sm:text-base z-50">ডেমো অনুরোধ</button>
+            </nav>
+        </section>
+        <!-- Nav section end -->
 
+        <!-- Hero section start -->
+        <section class="bg-green-7"> 
+            <!-- Main content -->
+            <div class="flex flex-col justify-center items-center text-green-2 py-5 sm:pt-16 mx-3">
+                <h1 class="text-2xl font-inter sm:text-4xl font-bold text-center sm:leading-normal z-20">শিক্ষা প্রতিষ্ঠান ব্যবস্থাপনার <br> একটি নির্ভরযোগ্য সফটওয়্যার</h1>
+
+                <p class="text-center pt-2 z-20">এম এস এ  একটি শিক্ষা প্রতিষ্ঠান ব্যবস্থাপনা সফটওয়্যার যার মাধ্যমে শিক্ষা প্রতিষ্ঠানের <br> মধ্যে বিদ্যমান যাবতীয় কাজ গুলোকে ডিজিটালি এবং সহজে পরিচালনা করা যায়, <br> পাশাপাশি শিক্ষা প্রতিষ্ঠান কে একটি আধুনিক এবং</p>
+
+                <button class="hover:bg-green-3 duration-150 active:scale-95 inline-block px-8 py-2 border border-green-3 rounded-2xl my-4 sm:my-8 z-20">আরও জানুন <i class="fa-solid fa-arrow-right ml-2"></i></button>
+
+                <img class="w-full max-w-md z-20" src="./assets/hero-image.png" alt="Hero Image">
+            </div>
+        </section>
+        <!-- Hero section end -->
         
+        <!-- Background shape content -->
+        <img class="hidden sm:flex absolute top-1/3 left-10 z-0" src="./assets/hero-shape-1.png">
+        <img class="hidden sm:flex absolute right-0 top-0 z-0" src="./assets/hero-shape-2.png">
+        <img class="hidden sm:flex absolute top-1/3 w-36 right-1/4 z-0" src="./assets/hero-shape-3.png">
+        <img class="hidden sm:flex absolute bottom-0 w-80 z-0" src="./assets/hero-shape-4.png">
+        <img class="hidden sm:flex absolute right-0 bottom-0 w-96 z-0" src="./assets//hero-shape-5.png">
+
     </header>
     <!-- Header section end -->
 
