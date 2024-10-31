@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active-arrow-sign::before{
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-color: #3DCC96 transparent transparent transparent;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
