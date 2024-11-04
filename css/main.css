@@ -25,6 +25,7 @@
     margin-top: 10px;
 }
 
+
 .collapse-plus .collapse-title::after{
     content: "+";
 }
@@ -35,6 +36,23 @@
 
 .swiper-button-next::after{
     content: "→";
+}
+
+.prev-1::after{
+    content: "<";
+}
+.next-1::after{
+    content: ">";
+}
+
+.prev-1::after, .next-1::after{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #3DCC96;
+    padding: 10px;
+    border-radius: 50%;
+    font-family: sans-serif;
 }
 
 .swiper-button-prev::after, .swiper-button-next::after{

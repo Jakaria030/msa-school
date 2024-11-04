@@ -21,6 +21,7 @@ module.exports = {
       },
       backgroundImage: {
         "glass-image": "url('/assets/bg-image.png')",
+        "wave-image": "url('/assets/wave-bg.png')",
       },
     },
   },
