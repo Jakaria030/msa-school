@@ -13,6 +13,12 @@
     transform: translate(-50%, -50%);
 }
 
+@media (max-width: 640px) {
+    .small-screen-arrow::before {
+        top: 115%;
+    }
+}
+
 .collapse .collapse-title::after{
     content: "-";
     width: 25px;
