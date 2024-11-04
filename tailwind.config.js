@@ -18,7 +18,10 @@ module.exports = {
         "green-7": "#094B38",
         "green-8": "#D3F8E5",
         "green-9": "#4B5563",
-      }
+      },
+      backgroundImage: {
+        "glass-image": "url('/assets/bg-image.png')",
+      },
     },
   },
   plugins: [require('daisyui')],
