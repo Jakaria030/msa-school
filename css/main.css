@@ -28,3 +28,20 @@
 .collapse-plus .collapse-title::after{
     content: "+";
 }
+
+.swiper-button-prev::after{
+    content: "←";
+}
+
+.swiper-button-next::after{
+    content: "→";
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #D3F8E5;
+    color: #3DCC96;
+    padding: 10px;
+    border-radius: 50%;
+}
