@@ -16,6 +16,8 @@ module.exports = {
         "green-5": "#3DCC96",
         "green-6": "#0C543F",
         "green-7": "#094B38",
+        "green-8": "#D3F8E5",
+        "green-9": "#4B5563",
       }
     },
   },
