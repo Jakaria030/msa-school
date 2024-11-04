@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper-slider-3', {
+const swiper = new Swiper('.swiper-slider', {
     // Optional parameters
     loop: true,
     grabCursor: true,
@@ -7,18 +7,13 @@ const swiper = new Swiper('.swiper-slider-3', {
     // Circle pagination 
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
   
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-
-    // Pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
     },
     
     // break point
@@ -36,4 +31,4 @@ const swiper = new Swiper('.swiper-slider-3', {
             slidesPerView: 4,
         },
     },
-  });
+});
