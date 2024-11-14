@@ -19,16 +19,15 @@
 
     <!-- Navbar start -->
     <nav class="bg-green-6 border-b border-green-4 sticky top-0 z-50">
-        <section class="w-11/12 sm:w-10/12 mx-auto py-4 flex items-center justify-between gap-2 sm:gap-5 text-green-1">
+        <section class="w-11/12 sm:w-10/12 mx-auto py-4 flex items-center justify-between gap-2 sm:gap-5 text-green-1 ">
             <!-- Left content -->
-            <div class="flex items-center gap-3 lg:gap-0">
+            <div class=" flex items-center gap-3 lg:gap-0">
 
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="lg:hidden">
+                <div>
+                    <button id="menuIcon" onclick="toggleMenu()" class="nav-content w-8 lg:hidden">
                         <i class="fa-solid fa-bars text-2xl"></i>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm bg-green-4 dropdown-content rounded-lg z-50 mt-5 w-52 p-2 shadow">
+                    </button>
+                    <ul class="absolute hidden w-11/12 sm:w-1/3 lg:hidden bg-green-4 rounded-lg z-50 mt-5 p-4 space-y-1 shadow dropdown-content">
                         <li><a href="#">হোম</a></li>
                         <li><a href="#">ফিচার</a></li>
                         <li><a href="#">প্যাকেজ এবং প্রাইস</a></li>
@@ -38,13 +37,13 @@
                     </ul>
                 </div>
 
-                <a href="#">
+                <a class="nav-content" href="#">
                     <img class="w-40" src="./assets/nav-logo.png" alt="Logo">
                 </a>
             </div>
 
             <!-- Middle content -->
-            <ul class="hidden lg:flex items-center justify-between gap-8 text-center">
+            <ul class="nav-content hidden lg:flex items-center justify-between gap-8 text-center">
                 <li class="border border-green-1 rounded-full px-4 py-1"><a href="#">হোম</a></li>
                 <li><a href="#">ফিচার</a></li>
                 <li><a href="#">প্যাকেজ এবং প্রাইস</a></li>
@@ -55,7 +54,7 @@
 
             <!-- Right content -->
             <button
-                class="hover:bg-green-3 duration-150 active:scale-95 inline-block cursor-pointer border border-green-3 px-4 sm:px-6 text-center py-2 rounded-full text-green-2 font-bold text-sm sm:text-base z-50">ডেমো
+                class="nav-content hover:bg-green-3 duration-150 active:scale-95 inline-block cursor-pointer border border-green-3 px-4 sm:px-6 text-center py-2 rounded-full text-green-2 font-bold text-sm sm:text-base z-50">ডেমো
                 অনুরোধ</button>
         </section>
     </nav>
@@ -66,7 +65,7 @@
         <!-- Hero content -->
         <div class="bg-green-7">
             <!-- Main content -->
-            <div class="flex flex-col justify-center items-center text-green-2 py-5 sm:pt-16 mx-3">
+            <div class="hero-contents flex flex-col justify-center items-center text-green-2 py-5 sm:pt-16 mx-3">
                 <h1 class="text-2xl font-inter sm:text-4xl font-bold text-center sm:leading-normal z-20">শিক্ষা
                     প্রতিষ্ঠান ব্যবস্থাপনার <br> একটি নির্ভরযোগ্য সফটওয়্যার</h1>
 
@@ -92,9 +91,9 @@
     <!-- Hero section end -->
 
     <!-- Applicable organization for MSA section start -->
-    <section class="py-10 sm:py-16 space-y-8 sm:space-y-10">
+    <section id="applicable-section" class="py-10 sm:py-16 space-y-8 sm:space-y-10">
         <!-- Section title and Applicable button -->
-        <div class="max-w-2xl mx-auto text-center">
+        <div class="applicable-title-section max-w-2xl mx-auto text-center">
             <!-- Section title -->
             <div class="mx-3">
                 <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">যে সকল প্রতিষ্ঠানের জন্য MSA <br>
@@ -117,7 +116,7 @@
         <div class="bg-green-2">
             <div
                 class="w-11/12 sm:w-10/12 mx-auto py-10 lg:py-16 flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-16">
-                <div class="basis-1/2 grid grid-cols-2 sm:grid-cols-3 gap-5">
+                <div class="benefits-left-contents basis-1/2 grid grid-cols-2 sm:grid-cols-3 gap-5">
                     <div class="border border-green-3 p-3 text-center rounded-md space-y-2">
                         <img class="mx-auto" src="./assets/parents-icon.png">
                         <h4 class="text-green-3 font-bold text-sm sm:text-base">অভিভাবক প্যানেল</h4>
@@ -144,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="basis-1/2">
+                <div class="benefits-right-contents basis-1/2">
                     <h3 class="text-xl sm:text-2xl font-bold text-green-3  font-inter">কিন্ডারগার্ডেনের মূল সুবিধা</h3>
                     <p class="text-sm sm:text-base text-green-7 mt-2">কিন্ডারগার্টেন প্রতিষ্ঠান সমূহ পড়াশুনার মান
                         উন্নয়ন এবং আধুনিক সুযোগ-সুবিধা ও শিক্ষার সঠিক পরিবেশ বজায় রাখতে আগ্রহী থাকেন। কিন্তু অনেক
@@ -160,10 +159,10 @@
     <!-- Applicable organization for MSA section end -->
 
     <!-- Key benefits of MSA section start -->
-    <section class="w-11/12 sm:w-10/12 mx-auto">
+    <section id="key-benefits-section" class="w-11/12 sm:w-10/12 mx-auto">
         <!-- Section title -->
         <div class="max-w-3xl mx-auto text-center">
-            <div class="mx-3">
+            <div class="key-benefits-title-section  mx-3">
                 <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">এম এস এ এর মূল সুযোগ-সুবিধা সমূহ</h2>
                 <p class="text-sm sm:text-base text-green-7 py-3 sm:py-4">শিক্ষা প্রতিষ্ঠানের যাবতীয় কাজ গুলো সহজে ,কম
                     খরচে এবং দক্ষতার সাথে ব্যবস্থাপনা করার জন্য বিভিন্ন সুযোগ-সুবিধা সম্বলিত ফিচার এডুফাই তে যুক্ত করা
@@ -173,7 +172,7 @@
         </div>
 
         <!-- Cards section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5 sm:mt-10">
+        <div class="key-benefits-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5 sm:mt-10">
             <!-- card-1 -->
             <div class="flex flex-col sm:flex-row gap-4 border-b sm:border-r lg:border-r-0 border-green-5 py-4 sm:p-4">
                 <div class="w-52 mx-auto">
@@ -371,11 +370,11 @@
     <!-- Key benefits of MSA section end -->
 
     <!-- Why choose MSA section start -->
-    <section class="py-10 sm:py-16 bg-green-2 mt-10 sm:mt-16">
+    <section id="choose-msa-section" class="py-10 sm:py-16 bg-green-2 mt-10 sm:mt-16">
         <div class="w-11/12 sm:w-10/12 mx-auto">
             <!-- Section title -->
             <div class="max-w-3xl mx-auto text-center">
-                <div class="mx-3">
+                <div class="choose-msa-title-section mx-3">
                     <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">কেন এম এস এ কে বেছে নিবেন ?</h2>
                     <p class="text-sm sm:text-base text-green-7 py-3 sm:py-4">MSA হল একটি ক্লাউড-ভিত্তিক স্কুল
                         ম্যানেজমেন্ট সফটওয়্যার যা আপনাকে সহজেই আপনার স্কুলের সমস্ত কাজ পরিচালনা করতে সহায়তা করবে। এটি
@@ -388,7 +387,7 @@
             </div>
 
             <!-- Cards section -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5 sm:mt-10">
+            <div class="choose-msa-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5 sm:mt-10">
                 <!-- card-1 -->
                 <div
                     class="flex flex-col sm:flex-row gap-4 border-dashed border-b sm:border-r lg:border-r-0 border-green-5 py-4 sm:p-4">
@@ -515,17 +514,17 @@
     <!-- Why choose MSA section end -->
 
     <!-- How MSA can make your school/college more efficient section start -->
-    <section class="py-10 sm:py-16 w-11/12 sm:w-10/12 mx-auto">
+    <section id="make-efficient-section" class="py-10 sm:py-16 w-11/12 sm:w-10/12 mx-auto">
         <!-- Section title -->
         <div class="max-w-3xl mx-auto text-center">
-            <div class="mx-3">
+            <div class="make-efficient-title-section mx-3">
                 <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">কিভাবে আপনার স্কুল/কলেজ আগের <br>
                     চেয়ে দ্রুত হবে</h2>
             </div>
         </div>
 
         <!-- Cards section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8 pt-6 sm:pt-10">
+        <div class="make-efficient-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8 pt-6 sm:pt-10">
             <!-- Card-1 -->
             <div class="flex flex-col justify-center items-center gap-2 bg-green-2 p-5 sm:p-10 rounded-lg">
                 <img src="./assets/new-student-icon.png">
@@ -594,11 +593,11 @@
     <!-- How MSA can make your school/college more efficient section end -->
 
     <!-- Our service used section start -->
-    <section class="bg-wave-image bg-no-repeat bg-cover bg-center">
+    <section id="services-section" class="bg-wave-image bg-no-repeat bg-cover bg-center">
         <div class="py-10 sm:py-24 w-11/12 sm:w-10/12 mx-auto">
             <!-- Section title -->
             <div class="max-w-5xl mx-auto text-center">
-                <div class="mx-3">
+                <div class="services-title mx-3">
                     <h2 class="text-xl sm:text-4xl font-bold text-center text-white font-inter">বাংলাদেশের ৬০০ র বেশি প্রতিষ্ঠান
                         তাদের প্রতিষ্ঠান পরিচালনার জন্য নিয়মিত ব্যবহার করছে MSA</h2>
                 </div>
@@ -607,7 +606,7 @@
             <!-- Slider section -->
             <div class="swiper pt-12">
                 <div class="swiper-slider-1 overflow-hidden mx-5 sm:mx-20 mb-10 px-2">
-                    <div class="swiper-wrapper">
+                    <div class="services-cards swiper-wrapper">
                         <div
                             class="flex flex-col justify-center items-center gap-2 bg-green-2 p-5 sm:p-10 rounded-lg swiper-slide">
                             <img src="./assets/logo-1.png">
@@ -646,9 +645,9 @@
     <!-- Our service used section end -->
 
     <!-- Connect your organization section start -->
-    <section class="pt-10 sm:pt-16 w-11/12 sm:w-10/12 mx-auto">
+    <section id="connect-organization-section" class="pt-10 sm:pt-16 w-11/12 sm:w-10/12 mx-auto">
         <!-- Section title and Applicable button -->
-        <div class="max-w-2xl mx-auto text-center pb-0 sm:pb-16">
+        <div class="connect-organization-title max-w-2xl mx-auto text-center pb-0 sm:pb-16">
             <!-- Section title -->
             <div class="mx-3">
                 <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">বাইরে কিংবা ক্লাস রুমে, আপনার
@@ -672,11 +671,11 @@
         <!-- Portal content -->
         <div class="flex flex-col lg:flex-row gap-10">
 
-            <div class="basis-1/2 pt-10 sm:pt-0">
+            <div class="connect-organization-left-card basis-1/2 pt-10 sm:pt-0">
                 <img class="mx-auto" src="./assets/portal-image.png">
             </div>
 
-            <div class="basis-1/2 space-y-3">
+            <div class="connect-organization-right-card basis-1/2 space-y-3">
                 <h3 class="text-xl sm:text-2xl font-bold text-green-3  font-inter">অভিভাবক পোর্টাল</h3>
                 <p class="text-sm sm:text-base text-green-7 mt-2">প্রতিষ্ঠানের সাথে অভিভাবকদের দূরত্ব কমিয়ে এনে অভিভাবক
                     নিজের বাচ্চার যাবতীয় শিক্ষা কার্যক্রম যেনো ঘরে বসেই মনিটর করতে পারে তার জন্য এডুফাই অ্যান্ড্রয়েড
@@ -707,10 +706,10 @@
     <!-- Connect your organization section end -->
 
     <!-- FAQ section start -->
-    <section class="py-10 sm:py-16 mt-10 bg-green-2">
+    <section id="faq-section" class="py-10 sm:py-16 mt-10 bg-green-2">
         <div class="w-11/12 sm:w-10/12 mx-auto">
             <!-- Section title -->
-            <div class="max-w-2xl mx-auto text-center">
+            <div class="faq-title max-w-2xl mx-auto text-center">
                 <div class="mx-3">
                     <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">প্রায়শই জিজ্ঞাসিত প্রশ্ন গুলো -
                     </h2>
@@ -722,7 +721,7 @@
 
             <!-- Questions content -->
             <div class="flex flex-col lg:flex-row justify-center gap-2 lg:gap-5 pt-5 sm:pt-10">
-                <div class="w-full space-y-2">
+                <div class="faq-left-items w-full space-y-2">
                     <div class="collapse rounded-md collapse-plus bg-green-8">
                         <input type="radio" name="my-accordion-3" />
                         <div class="collapse-title text-base sm:text-lg text-green-9 flex items-center">
@@ -784,7 +783,7 @@
                     </div>
                 </div>
 
-                <div class="w-full space-y-2">
+                <div class="faq-right-items w-full space-y-2">
                     <div class="collapse rounded-md collapse-plus bg-green-8">
                         <input type="radio" name="my-accordion-3" />
                         <div class="collapse-title text-base sm:text-lg text-green-9 flex items-center">
@@ -851,10 +850,10 @@
     <!-- FAQ section end -->
 
     <!-- Map section start -->
-    <section class="py-10 sm:py-16 w-11/12 sm:w-10/12 mx-auto">
+    <section id="map-section" class="py-10 sm:py-16 w-11/12 sm:w-10/12 mx-auto">
         <!-- Section title -->
         <div class="max-w-2xl mx-auto text-center">
-            <div class="mx-3">
+            <div class="map-title-section mx-3">
                 <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">সমগ্র বাংলাদেশের ৮ টি বিভাগে পৌঁছে <br
                         class="hidden lg:flex"> গেছে MSA এর সেবা</h2>
                 <p class="text-sm sm:text-base text-green-7 py-3 sm:py-4">৮ বিভাগ, ৫৪+ জেলা, ৬০+ শিক্ষা প্রতিষ্ঠান
@@ -863,18 +862,18 @@
         </div>
 
         <!-- Map -->
-        <div>
+        <div class="map">
             <img class="mx-auto" src="./assets/map-image.png" alt="Map Image">
         </div>
     </section>
     <!-- Map section end -->
 
     <!--Glassmorphism background section start -->
-    <section class="bg-glass-image bg-cover bg-center relative">
+    <section id="glassmorphism-section" class="bg-glass-image bg-cover bg-center relative">
         <div class="absolute bg-green-3/80 inset-0 z-0"></div>
         <!-- Cards section -->
         <div class="w-10/12 sm:w-8/12 mx-auto py-20 sm:py-32 z-20 relative">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
+            <div class="glassmorphism-cards grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
                 <!-- Card-1 -->
                 <div class="flex flex-col justify-center items-center gap-2 bg-green-2 p-5 sm:p-10 rounded-lg">
                     <img class="size-20" src="./assets/school-icon.png">
@@ -908,17 +907,17 @@
     <!--Glassmorphism background section end -->
 
     <!-- Our success section start -->
-    <section class="pt-10 sm:pt-16 w-11/12 sm:w-10/12 mx-auto">
+    <section id="success-section" class="pt-10 sm:pt-16 w-11/12 sm:w-10/12 mx-auto">
         <!-- Section title -->
         <div class="max-w-2xl mx-auto text-center">
-            <div class="mx-3">
+            <div class="success-title-section mx-3">
                 <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">আমাদের সাফল্য</h2>
             </div>
         </div>
 
         <!-- Slider section -->
         <div class="swiper mt-10">
-            <div class="swiper-slider-2 overflow-hidden mx-5 sm:mx-20 mb-20 px-2">
+            <div class="success-cards swiper-slider-2 overflow-hidden mx-5 sm:mx-20 mb-20 px-2">
                 <div class="swiper-wrapper">
                     <div class="relative max-w-xl swiper-slide">
                         <img class="w-full rounded-md" src="./assets/students.png">
@@ -966,10 +965,10 @@
     <!-- Our success section end -->
 
     <!-- User experience section start -->
-    <section class="py-10 sm:py-16 w-11/12 sm:w-10/12 mx-auto">
+    <section id="user-experience-section" class="py-10 sm:py-16 w-11/12 sm:w-10/12 mx-auto">
         <!-- Section title -->
         <div class="max-w-2xl mx-auto text-center">
-            <div class="mx-3">
+            <div class="user-experience-title mx-3">
                 <h2 class="text-xl sm:text-3xl font-bold text-green-3 font-inter">গ্রাহকদের অভিজ্ঞতা</h2>
                 <p class="text-sm sm:text-base text-green-7 py-3 sm:py-4">আমাদের মূলবান গ্রাহক যারা তাদের অভিজ্ঞতা শেয়ার
                     করেছেন। আপনাদের সময় এর সাথে এগিয়ে যেতে পাশে থেকে সাহায্য করাই আমাদের অঙ্গীকার।</p>
@@ -980,7 +979,7 @@
         <div class="swiper mt-5">
             <div class="swiper-slider-3 overflow-hidden mx-5 sm:mx-20 mb-10 px-2">
                 <div class="swiper-wrapper">
-                    <div class="px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
+                    <div class="user-experience-contents px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
                         <figure>
                             <img class="rounded-full mx-auto" src="./assets/user-1.png" />
                         </figure>
@@ -996,7 +995,7 @@
                         </div>
                     </div>
 
-                    <div class="px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
+                    <div class="user-experience-contents px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
                         <figure>
                             <img class="rounded-full mx-auto" src="./assets/user-2.png" />
                         </figure>
@@ -1012,7 +1011,7 @@
                         </div>
                     </div>
 
-                    <div class="px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
+                    <div class="user-experience-contents px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
                         <figure>
                             <img class="rounded-full mx-auto" src="./assets/user-3.png" />
                         </figure>
@@ -1028,7 +1027,7 @@
                         </div>
                     </div>
 
-                    <div class="px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
+                    <div class="user-experience-contents px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
                         <figure>
                             <img class="rounded-full mx-auto" src="./assets/user-4.png" />
                         </figure>
@@ -1044,7 +1043,7 @@
                         </div>
                     </div>
 
-                    <div class="px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
+                    <div class="user-experience-contents px-5 py-8 space-y-4 rounded-md border border-green-3 bg-green-8  swiper-slide">
                         <figure>
                             <img class="rounded-full mx-auto" src="./assets/user-3.png" />
                         </figure>
@@ -1074,7 +1073,7 @@
     <footer>
         <!-- Footer top section -->
         <section class="bg-green-7 text-white py-10 sm:py-20">
-            <div class="w-11/12 sm:w-10/12 mx-auto flex flex-col lg:flex-row gap-10 lg:gap-5">
+            <div class="top-footer w-11/12 sm:w-10/12 mx-auto flex flex-col lg:flex-row gap-10 lg:gap-5">
                 <div class="basis-1/3">
                     <div class="flex items-center gap-3 text-green-2">
                         <img src="./assets/fav-icon.png">
@@ -1154,7 +1153,7 @@
         <!-- Footer bottom section -->
         <section class="bg-green-6 py-8">
             <div class="w-11/12 sm:w-10/12 mx-auto">
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-3">
+                <div class="bottom-footer flex flex-col lg:flex-row items-center justify-between gap-3">
                     <div class="flex items-center gap-4 text-green-2 text-sm">
                         <h4 class="text-center text-xl">Follow Us</h4>
                         <a href="#"><i class="fa-brands fa-facebook-f text-xl"></i></a>
@@ -1175,8 +1174,12 @@
 
     <!-- Swiper js file connect -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+
         const swiper1 = new Swiper('.swiper-slider-1', {
             // Optional parameters
             loop: true,
@@ -1281,6 +1284,355 @@
                 },
             },
         });
+        
+        function toggleMenu(){
+            let dropdwonContent = document.querySelector(".dropdown-content");
+            let menuIcon = document.querySelector("#menuIcon");
+            
+            dropdwonContent.classList.toggle("hidden");
+
+            if(dropdwonContent.classList.contains("hidden")){
+                menuIcon.innerHTML = `<i class="fa-solid fa-bars text-2xl"></i>`;
+            }else{
+                menuIcon.innerHTML = `<i class="fa-solid fa-x text-2xl"></i>`;
+                gsap.from(".dropdown-content", {
+                    opacity: 0,
+                    x: 250,
+                    duration: 0.5,
+                    ease: "power2.inOut"
+                });
+            }
+        }
+        // animation
+        function page1Animation(){
+            let tl = gsap.timeline();
+
+            tl.from(".nav-content", {
+                opacity: 0,
+                duration: 0.8,
+                y: -60,
+            },"page1")
+
+            tl.from(".hero-contents", {
+                opacity: 0,
+                duration: 0.8,
+                y: 60,
+            }, "page1")
+        }
+
+        function page2Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#applicable-section",
+                    scroller: "body",
+                    start: "top 85%",
+                    end: "top 10%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".applicable-title-section", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.5
+            })
+
+            tl.from(".benefits-left-contents", {
+                opacity: 0,
+                x:-100,
+                duration: 0.5,
+            }, "page2")
+
+            tl.from(".benefits-right-contents", {
+                opacity: 0,
+                x:100,
+                duration: 0.5,
+            }, "page2")
+        }
+
+        function page3Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#key-benefits-section",
+                    scroller: "body",
+                    start: "top 95%",
+                    end: "top 0%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".key-benefits-title-section", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.05
+            })
+
+            tl.from(".key-benefits-cards > div", {
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.1,
+            })
+        }
+        
+        function page4Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#choose-msa-section",
+                    scroller: "body",
+
+                    start: "top 95%",
+                    end: "top 0%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".choose-msa-title-section", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.05
+            })
+
+            tl.from(".choose-msa-cards > div", {
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.1,
+            })
+        }
+
+        function page5Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#make-efficient-section",
+                    scroller: "body",
+                    start: "top 95%",
+                    end: "top 0%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".make-efficient-title-section", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.05
+            })
+
+            tl.from(".make-efficient-cards > div", {
+                opacity: 0,
+                scale: 0.5,
+                duration: 0.1,
+            })
+        }
+        
+        function page6Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#services-section",
+                    scroller: "body",
+                    start: "top 95%",
+                    end: "top 0%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".services-title", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.05
+            })
+
+            tl.from(".services-cards > div", {
+                opacity: 0,
+                scale: 0.5,
+                duration: 0.1,
+            })
+        }
+        
+        function page7Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#connect-organization-section",
+                    scroller: "body",
+                    start: "top 85%",
+                    end: "top 0%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".connect-organization-title", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.5
+            })
+
+            tl.from(".connect-organization-left-card", {
+                opacity: 0,
+                x:-100,
+                duration: 0.5,
+            }, "page7")
+
+            tl.from(".connect-organization-right-card", {
+                opacity: 0,
+                x:100,
+                duration: 0.5,
+            }, "page7")
+        }
+
+        function page8Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#faq-section",
+                    scroller: "body",
+                    start: "top 80%",
+                    end: "top 30%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".faq-title", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.5
+            })
+
+            tl.from(".faq-left-items > div", {
+                opacity: 0,
+                delay: 0.5,
+                x: -100,
+                duration: 0.3,
+                stagger: 0.5
+            }, "page8")
+            tl.from(".faq-right-items > div", {
+                opacity: 0,
+                delay: 0.5,
+                x: 100,
+                duration: 0.3,
+                stagger: 0.5
+            }, "page8")
+        }
+
+        function page9Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#map-section",
+                    scroller: "body",
+                    start: "top 80%",
+                    end: "top 0%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".map-title-section", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.5
+            })
+
+            tl.from(".map", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 1
+            })
+        }
+
+        function page10Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#glassmorphism-section",
+                    scroller: "body",
+                    start: "top 75%",
+                    end: "top 10%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".glassmorphism-cards > div", {
+                opacity: 0,
+                scale: 0.5,
+                duration: 0.5
+            })
+        }
+
+        function page11Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#success-section",
+                    scroller: "body",
+                    start: "top 75%",
+                    end: "top 10%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".success-title-section", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.2
+            })
+
+            tl.from(".success-cards > div", {
+                opacity: 0,
+                x: 2000,
+                duration: 0.5
+            })
+        }
+
+        function page12Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#user-experience-section",
+                    scroller: "body",
+                    start: "top 75%",
+                    end: "top 10%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".user-experience-title", {
+                opacity: 0,
+                scale: 0.2,
+                duration: 0.2
+            })
+
+            tl.from(".user-experience-contents", {
+                opacity: 0,
+                y: 20,
+                duration: 0.5,
+                stagger: 0.3
+            })
+        }
+        
+        function page13Animation(){
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "footer",
+                    scroller: "body",
+                    start: "top 85%",
+                    end: "top 40%",
+                    scrub: 0.5
+                }
+            })
+
+            tl.from(".top-footer", {
+                opacity: 0,
+                x: -100,
+                duration: 0.5
+            })
+        }
+        // funcitons call
+        page1Animation();
+        page2Animation();
+        page3Animation();
+        page4Animation();
+        page5Animation();
+        page6Animation();
+        page7Animation();
+        page8Animation();
+        page9Animation();
+        page10Animation();
+        page11Animation();
+        page12Animation();
+        page13Animation();
+        
     </script>
 </body>
 
